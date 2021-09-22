@@ -9,6 +9,8 @@ comments: true
 
 [JavaFX](https://openjfx.io/) (API is [here](https://docs.oracle.com/javase/8/javafx/api/overview-summary.html)) is used to design GUI on desktop ([first released](https://en.wikipedia.org/wiki/JavaFX) in Dec 2008), mobile and embeded systems (Raspberry Pi?). The current long-term-support version is [JavaFX17](https://gluonhq.com/products/javafx/) (the one I used). This post is for desktop. Developing softwares are not easy, but they follow certain patterns, knowing the patterns can speed up the development. 
 
+JavaFX follows MVC design pattern, which is a design pattern that describes how to build models, views and controllers. The model is the data, the view is the user interface, and the controller is the logic. The model is usually a class, the view is a class (or an FXML file), and the controller is the class that handles the user interaction.
+
 **These are all based on my understanding so let me know if there are mistakes and I will fix them.**
 
 <div class='row mt-3'>
@@ -69,7 +71,7 @@ public void start(Stage primaryStage) {
     // fxmlLoader.setLocation(getClass().getResource("startup-window.fxml"));
     // AnchorPane root = fxmlLoader.load();
 
-    // do stuffs with loginController, e.g. reuse the window
+    // usually a view(i.e., scene/fxml file) is linked with an controller, do stuffs with loginController, e.g. reuse the window
     LoginController loginController = loader.getController();
     loginController.setStage(primaryStage); // reuse the window
     
@@ -119,28 +121,21 @@ stage.setResizable(false);
 stage.show();
 ```
 
-# Commmon Layout
-Usually a program is a combination of only a few layouts:
-* Table View
-* Tile View
-* Tab View
+# Common Layouts and Controls
+Design your own layout using SceneBuilder is easy and fast, however, there are two special layout that usually need extra care, they are so common such that every UI framework has built-in layouts for them with high performance:
+* Table View (One example is ListView in JavaFX)
+* Tile View (TileView in JavaFX)
 
-<div class='row mt-3'>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/2021-12-01-how-to-develop-GUI-using-JavaFX/2021-12-10-11-58-02.png" data-zoomable>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/2021-12-01-how-to-develop-GUI-using-JavaFX/2021-12-10-11-38-00.png" data-zoomable>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/2021-12-01-how-to-develop-GUI-using-JavaFX/2021-12-10-11-56-29.png" data-zoomable>
-    </div>
-</div>
-
-To combine them together, you need a few layouts that give you the freedom to do it:
+To combine them together with other self-designed layouts:
+* Tab View (TabView in JavaFX)
 * AnchorPane
 * SplitPane
 * GridPane
+* Accordion (which allows to expand and collapse panes)
+* Group
+* Region
+* Canvas
+* Scene
 * ...
 
 And a program usually uses only a few kind of controls, there are otheres, but usually it's just some similar things based on these:
@@ -156,12 +151,16 @@ And a program usually uses only a few kind of controls, there are otheres, but u
 
 These standard things are defined in every UI framework, in JavaFX is would be [javafx.scene.layout](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/package-summary.html) and [javafx.scene.control](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/package-summary.html).
 
-## ListView
+## ListView (one table view in JavaFX)
+<div class='row mt-3'>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/2021-12-01-how-to-develop-GUI-using-JavaFX/2021-12-10-11-58-02.png" data-zoomable width="500">
+    </div>
+</div>
 ListView let you display a list of items.
 1. Add a ListView control `listView` in your FXML file (e.g. use SceneBuilder).
 2. Add `fx:id` to the ListView.
 3. In the controller class:
-
 
 ```java
 // Assume User class is defined
@@ -203,7 +202,51 @@ userList.getSelectionModel().selectedItemProperty().addListener(
 // get selected item
 User selectedUser = listView.getSelectionModel().getSelectedItem();
 ```
-
-## TabPane
-
 ## TilePane
+<div class='row mt-3'>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/2021-12-01-how-to-develop-GUI-using-JavaFX/2021-12-10-11-38-00.png" data-zoomable width="500">
+    </div>
+</div>
+
+```java
+// Assume a TilePane is created as tilePane
+@FXML TilePane tilePane;
+List<Model> list = new ArrayList<Model>();
+List<ViewController> controllers = new ArrayList<ViewController>;
+
+public void refresh() {
+    tilePane.getChildren().clear();
+    // get data
+    list = reload_data();
+    // show data
+    for (Model model: list) {
+        // load view for the object
+        oneTileView = load_view(); // from FXML file as shown before is one way
+        
+        ViewController oneTileViewController = load_controller();
+        oneTileViewController.setModel(model);
+        controllers.add(oneTileViewController);
+
+        // add click event for each tile
+        oneTileView.setOnMouseClicked(e -> select(oneTileViewController));
+
+        tilePane.getChildren().add(oneTileView);
+
+    }
+}
+
+public void select(ViewController ctrl) {
+    // do something
+}
+```
+
+## TabView
+
+<div class='row mt-3'>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/2021-12-01-how-to-develop-GUI-using-JavaFX/2021-12-10-11-56-29.png" data-zoomable width="500">
+    </div>
+</div>
+
+# To be continued...
