@@ -15,3 +15,8 @@ bibliography: 2018-12-22-distill.bib
 ---
 
 * [A from-scratch tour of Bitcoin in Python](https://karpathy.github.io/2021/06/21/blockchain/)
+
+
+## Chinese
+
+* [Transformer日积月累](https://www.zhihu.com/column/c_1260183218026213376)
