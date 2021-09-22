@@ -1,24 +1,28 @@
 ---
 layout: about
-title: about
 permalink: /
-description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+title: Fangda <strong>HAN</strong>
+description: a machine-learning student
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: avator.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <a href="http://seqamlab.com/" target="blank">Sequence Analysis and Modeling</a>
+    <p>Piscataway, NJ, US 08854</p>
+    <p>Rutgers University</p>
 
-news: true  # includes a list of news items
+news: true
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: true
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi there, 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+This is Fangda HAN, I currently work on my PhD in computer science at [SeqAM Lab](http://seqamlab.com/){:target="\_blank"}, Rutgers University with [Vladimir Pavlovic](http://seqamlab.com/profile/?smid=218){:target="\_blank"}. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Before joining Rutgers, I finished my master in Engineering Physics at Tsinghua University under [Yongshun Xiao](https://www.researchgate.net/profile/Yongshun_Xiao2){:target="\_blank"}, as well as my bachelor in Engineering Physics at Tsinghua Univerisity.
+
+My interests are in machine learning now, specifically in computer vision and deep learning, more specifically in image retrieval and image generation.
+
+I also photograph, and play badminton and learn Spanish! 
