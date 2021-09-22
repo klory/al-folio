@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: Fangda <strong>HAN</strong>
-description: a machine-learning student
+description:
 
 profile:
   align: right
@@ -19,7 +19,7 @@ social: true
 
 Hi there, 
 
-This is Fangda HAN, I currently work on my PhD in computer science at [SeqAM Lab](http://seqamlab.com/){:target="\_blank"}, Rutgers University with [Vladimir Pavlovic](http://seqamlab.com/profile/?smid=218){:target="\_blank"}. 
+This is Fangda HAN (韩放达), I currently work on my PhD in computer science at [SeqAM Lab](http://seqamlab.com/){:target="\_blank"}, Rutgers University with [Vladimir Pavlovic](http://seqamlab.com/profile/?smid=218){:target="\_blank"}. 
 
 Before joining Rutgers, I finished my master in Engineering Physics at Tsinghua University under [Yongshun Xiao](https://www.researchgate.net/profile/Yongshun_Xiao2){:target="\_blank"}, as well as my bachelor in Engineering Physics at Tsinghua Univerisity.
 
