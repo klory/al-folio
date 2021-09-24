@@ -47,6 +47,7 @@ All markdown files support HTML and [Liquid](https://github.com/Shopify/liquid) 
 * `blog/index.html` shows the content.
 * `_posts/*` contains all blogs.
 * follow [the al-folio template](https://github.com/alshedivat/al-folio/blob/master/_posts/2018-12-22-distill.md) to use distill format to write your blog.
+* `layout` has to be `post` if you want to use Disqus to add comment.
 
 ### Projects
 
