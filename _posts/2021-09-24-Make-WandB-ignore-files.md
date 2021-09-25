@@ -12,6 +12,13 @@ comments: true
 
 While I know we can just create another folder to save our large files, but I kind of like how wandb name each run, so I still prefer saving to `wandb.run.dir`. (and sometimes it took too long to upload all files...)
 
+<div class='row mt-3'>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/wandb-run-dir.jpg" data-zoomable>
+    </div>
+</div>
+
+
 The official doc very briefly talked about how to ignore files for your project, but there is not demo files, I did some research in their source code, and found the steps.
 
 1. Create a file named `setting` in `wandb/`

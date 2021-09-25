@@ -32,7 +32,8 @@ function sk() {
 
 When you are inside a screen session:
 
-* press `control + A`, release then press `D` to quit the current session
+* press `control + A`, release then press `D` to detach the current session
+* press `control + D`, quit the current session
 * press `control + A`, release then type `:sessionname new-session-name` to rename the current session.
 
 
