@@ -40,3 +40,7 @@ When you are inside a screen session:
 ## Defects
   
 * Sometimes I forget whether I'm in a session or which session I'm in, but I could not find a way to always show the current session name.
+
+## Q&A
+
+* [can't re-attach to your screen session after a lost connection](https://kb.iu.edu/d/ahrm)
