@@ -1,7 +1,7 @@
 ---
 layout: post
 # title: A long announcement with details
-date: 2021-02-20 05:30:00-0500
+date: 2021-10-22
 inline: true
 ---
 
