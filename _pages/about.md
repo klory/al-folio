@@ -6,7 +6,7 @@ description:
 
 profile:
   align: right
-  image: avator.jpg
+  image: avator.webp
   address: >
     <a href="http://seqamlab.com/" target="blank">Sequence Analysis and Modeling</a>
     <p>Piscataway, NJ, US 08854</p>
