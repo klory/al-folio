@@ -25,10 +25,7 @@ category: work
 * [Code](https://github.com/Hareesh-Ravi/Mutimodal-Discourse) 
 
 <h2> Citation </h2>
-<pre>
-<code>
-@misc{
-    alikhani2021crossmodal,
+<pre>@misc{alikhani2021crossmodal,
     title={Cross-Modal Coherence for Text-to-Image Retrieval}, 
     author={Malihe Alikhani and Fangda Han and Hareesh Ravi and Mubbasir Kapadia and Vladimir Pavlovic and Matthew Stone},
     year={2021},
@@ -36,7 +33,6 @@ category: work
     archivePrefix={arXiv},
     primaryClass={cs.CV}
 }
-</code>
 </pre>
 
 <h2> License </h2>
