@@ -1,18 +1,31 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Pavlovic":
+  - firstname: ["Vladimir", "V."]
+    url: http://seqamlab.com/vladimir-pavlovic/
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Guerrero":
+  - firstname: ["Ricardo", "R."]
+    url: https://scholar.google.com/citations?user=bn2TAy8AAAAJ
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Hao":
+  - firstname: ["Guoyao", "G."]
+    url: https://www.linkedin.com/in/guoyao-hao-138207138
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Alikhani":
+  - firstname: ["Malihe", "M."]
+    url: https://www.malihealikhani.com/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Ravi":
+  - firstname: ["Hareesh", "H."]
+    url: https://hareesh-ravi.github.io/
+
+"Li":
+  - firstname: ["Jiatong", "J."]
+    url: http://seqamlab.com/jiatong-li/
+
+"Zhao":
+  - firstname: ["Long", "L."]
+    url: https://garyzhao.github.io/
+
+"Peng":
+  - firstname: ["Xi", "X."]
+    url: https://sites.google.com/site/xipengcshomepage/home
