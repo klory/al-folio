@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Retrieval System with Coherence Relations
+title: Cross-Modal Coherence for Text-to-Image Retrieval
 description: Use coherence relations to improve retrieval system performance
 img: /assets/img/retrieval_with_coherence.jpg
 redict:
