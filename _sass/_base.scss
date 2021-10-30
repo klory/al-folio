@@ -19,6 +19,10 @@ a, table.table a {
   }
 }
 
+td:hover {
+  background-color: var(--global-hover-color);
+}
+
 blockquote {
   background: var(--global-bg-color);
   border-left: 2px solid var(--global-theme-color);
