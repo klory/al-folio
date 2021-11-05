@@ -25,4 +25,6 @@ Before joining Rutgers, I finished my master in Engineering Physics at Tsinghua 
 
 My interests are in machine learning now, specifically in computer vision and deep learning, more specifically in image retrieval and image generation.
 
-I also photograph, and play badminton and learn Spanish! 
+I also photograph, and play basketball, badminton and practice Spanish! 
+
+<h1><a href="https://docs.google.com/document/d/14j899I3dGMRYos3pleLSCxTNHHlWzBPlr9_dfkxSwZM/edit?usp=sharing" target="_blank"> A may-not-up-to-date Resume</a></h1>

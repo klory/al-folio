@@ -10,7 +10,7 @@ authors:
     affiliations:
       name: Myself
 
-bibliography: 2018-12-22-distill.bib
+bibliography: distill.bib
 
 ---
 
