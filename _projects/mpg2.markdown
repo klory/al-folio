@@ -57,4 +57,4 @@ category: work
 </pre>
 
 <h2> License </h2>
-[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a>
