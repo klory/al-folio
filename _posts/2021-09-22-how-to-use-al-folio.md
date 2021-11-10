@@ -7,8 +7,8 @@ date: 2021-09-22
 authors:
   - name: Fangda Han
     url: "https://klory.github.io/"
-    affiliations:
-      name: Myself
+    # affiliations:
+    #   name: Myself
 
 bibliography: distill.bib
 

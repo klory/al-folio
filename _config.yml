@@ -6,7 +6,7 @@ title: Fangda HAN # the website title (if blank, full name will be used instead)
 first_name: Fangda
 middle_name: 
 last_name: Han
-email: fh199@cs.rutgeres.edu
+email: fangda.han.8@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Fangda's personal website
 footer_text: >
@@ -65,7 +65,7 @@ wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
 
 contact_note: >
-  Check my Medium and Twitter.
+  Sometimes write a blog here, sometimes post a Twitter, I use email most frequently.
 
 google_analytics: UA-XXXXXXXXX # out your google-analytics code
 panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
@@ -75,7 +75,7 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # -----------------------------------------------------------------------------
 
 blog_name: Thoughts  # your blog must have a name for it to show up in the nav bar
-blog_description: Random thoughts and wild collections
+blog_description: Random thoughts and collections
 permalink: /blog/:year/:title/
 
 # Pagination
