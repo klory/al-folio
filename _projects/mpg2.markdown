@@ -8,6 +8,14 @@ importance: 1
 category: work
 ---
 
+<h1 class="title"> Multi-attribute Pizza Generator (MPG2) - Cross-domain Attribute Control with Conditional StyleGAN</h1>
+
+<table class="table table-bordered text-center">
+      <td><a href="https://arxiv.org/abs/2110.11830"><div>Paper</div></a></td>
+      <td><a href="https://github.com/klory/MPG2"><div>Code</div></a></td>
+      <td><a href="http://foodai.cs.rutgers.edu:2022"><div>Demo</div></a></td>
+</table>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <video class="video-fluid z-depth-1" autoplay loop controls muted>
@@ -38,12 +46,6 @@ category: work
     MPG2 Framework
 </div>
 
-<h2> Links </h2>
-<table class="table table-bordered text-center">
-      <td><a href="https://arxiv.org/abs/2110.11830"><div>Paper</div></a></td>
-      <td><a href="https://github.com/klory/MPG2"><div>Code</div></a></td>
-      <td><a href="http://foodai.cs.rutgers.edu:2022"><div>Demo</div></a></td>
-</table>
 
 <h2> Citation </h2>
 <pre>@misc{han2021multiattribute,

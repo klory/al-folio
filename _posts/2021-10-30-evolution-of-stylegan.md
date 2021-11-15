@@ -20,12 +20,51 @@ output:
 
 # Still Working on it
 
-StyleGANs<d-cite key="karras2019style, karras2020analyzing, karras2021alias"></d-cite> are a series of generative models that generate high-quality images from a latent space.
+StyleGANs<d-cite key="karras2019style, karras2020analyzing, karras2021alias"></d-cite> are a series of generative models that generate high-quality images from a latent space (e.g. random noise).
 
 # Evolution
 
 ## ProgressiveGAN<d-cite key="karras2017progressive"></d-cite>
+![](/assets/img/2021-10-30-evolution-of-stylegan/2021-11-12-19-23-01.png).
 
+### Progressive Growing
+> Generate better low-resolution images, then growing to high-resolution.
+
+![](/assets/img/2021-10-30-evolution-of-stylegan/2021-11-13-14-17-38.png)
+
+G and D are only defined once. But in each G has several `to_rgb` layers, which are used to generate images at different resolutions. After training, only the last `to_rgb` layer is used to generate the image at high resolution. The layers related to smaller resolution are trained first, and then fine-tuned together with the layers related to larger resolution.
+
+### Minibatch Standard Deviation
+> Encouraging the minibatches of generated and training images to show similar statistics.
+
+From [official code](https://github.com/NVlabs/stylegan2-ada-pytorch/blob/6f160b3d22b8b178ebe533a50d4d5e63aedba21d/training/networks.py#L589): 
+
+``` python
+class MinibatchStdLayer(torch.nn.Module):
+    def __init__(self, group_size, num_channels=1):
+        super().__init__()
+        self.group_size = group_size
+        self.num_channels = num_channels
+
+    def forward(self, x):
+        N, C, H, W = x.shape
+        with misc.suppress_tracer_warnings(): # as_tensor results are registered as constants
+            G = torch.min(torch.as_tensor(self.group_size), torch.as_tensor(N)) if self.group_size is not None else N
+        F = self.num_channels
+        c = C // F
+
+        y = x.reshape(G, -1, F, c, H, W)    # [GnFcHW] Split minibatch N into n groups of size G, and channels C into F groups of size c.
+        y = y - y.mean(dim=0)               # [GnFcHW] Subtract mean over group.
+        y = y.square().mean(dim=0)          # [nFcHW]  Calc variance over group.
+        y = (y + 1e-8).sqrt()               # [nFcHW]  Calc stddev over group.
+        y = y.mean(dim=[2,3,4])             # [nF]     Take average over channels and pixels.
+        y = y.reshape(-1, F, 1, 1)          # [nF11]   Add missing dimensions.
+        y = y.repeat(G, 1, H, W)            # [NFHW]   Replicate over group and pixels.
+        x = torch.cat([x, y], dim=1)        # [NCHW]   Append to input as new channels.
+        return x
+``` 
+
+Basically, it generates an additional channel with the variance of all input images of size [CHW] and append it to the input.
 
 ## StyleGAN<d-cite key="karras2019style"></d-cite>
 

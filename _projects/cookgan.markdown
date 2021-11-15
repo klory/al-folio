@@ -8,6 +8,14 @@ importance: 1
 category: work
 ---
 
+<h1 class="title"> CookGAN: Meal Image Synthesis from Ingredients</h1>
+
+<table class="table table-bordered text-center">
+    <td><a href="https://openaccess.thecvf.com/content_WACV_2020/papers/Han_CookGAN_Meal_Image_Synthesis_from_Ingredients_WACV_2020_paper.pdf"><div>Paper</div></a></td>
+    <td><a href="https://github.com/klory/CookGAN"><div>Code</div></a></td>
+    <td><a href="http://foodai.cs.rutgers.edu:2019"><div>Demo</div></a></td>
+</table>
+
 <h2> Abstract </h2>
 <p>In this work we propose a new computational framework, based on generative deep models, for synthesis of photo-realistic food meal images from textual list of its ingredients. Previous works on synthesis of images from text typically rely on pre-trained text models to extract text features, followed by generative neural networks (GAN) aimed to generate realistic images conditioned on the text features. These works mainly focus on generating spatially compact and well-defined categories of objects, such as birds or flowers, but meal images are significantly more complex, consisting of multiple ingredients whose appearance and spatial qualities are further modified by cooking methods. To generate real-like meal images from ingredients, we propose Cook Generative Adversarial Networks (CookGAN), CookGAN first builds an attention-based ingredients-image association model, which is then used to condition a generative neural network tasked with synthesizing meal images. Furthermore, a cycle-consistent constraint is added to further improve image quality and control appearance. Experiments show our model is able to generate meal images corresponding to the ingredients.</p>
 
@@ -19,13 +27,6 @@ category: work
 <div class="caption">
     CookGAN Framework
 </div>
-
-<h2> Links </h2>
-<table class="table table-bordered text-center">
-      <td><a href="https://openaccess.thecvf.com/content_WACV_2020/papers/Han_CookGAN_Meal_Image_Synthesis_from_Ingredients_WACV_2020_paper.pdf"><div>Paper</div></a></td>
-      <td><a href="https://github.com/klory/CookGAN"><div>Code</div></a></td>
-      <td><a href="http://foodai.cs.rutgers.edu:2019"><div>Demo</div></a></td>
-</table>
 
 <div class="embed-responsive embed-responsive-16by9">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0jsteoeuZQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

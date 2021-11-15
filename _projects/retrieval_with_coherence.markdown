@@ -8,6 +8,13 @@ importance: 2
 category: work
 ---
 
+<h1 class="title"> Cross-Modal Coherence for Text-to-Image Retrieval </h1>
+
+<table class="table table-bordered text-center">
+    <td><a href="https://arxiv.org/abs/2109.11047"><div>Paper</div></a></td>
+    <td><a href="https://github.com/Hareesh-Ravi/Mutimodal-Discourse"><div>Code</div></a></td>
+</table>
+
 <h2> Abstract </h2>
 <p> Common image-text joint understanding techniques presume that images and the associated text can universally be characterized by a single implicit model. However, co-occurring images and text can be related in qualitatively different ways, and explicitly modeling it could improve the performance of current joint understanding models. In this paper, we train a Cross-Modal Coherence Modelfor text-to-image retrieval task. Our analysis shows that models trained with image--text coherence relations can retrieve images originally paired with target text more often than coherence-agnostic models. We also show via human evaluation that images retrieved by the proposed coherence-aware model are preferred over a coherence-agnostic baseline by a huge margin. Our findings provide insights into the ways that different modalities communicate and the role of coherence relations in capturing commonsense inferences in text and imagery. </p>
 
@@ -20,11 +27,6 @@ category: work
     Cross-Modal Coherence Model
 </div>
 
-<h2> Links </h2>
-<table class="table table-bordered text-center">
-    <td><a href="https://arxiv.org/abs/2109.11047"><div>Paper</div></a></td>
-    <td><a href="https://github.com/Hareesh-Ravi/Mutimodal-Discourse"><div>Code</div></a></td>
-</table>
 
 <h2> Citation </h2>
 <pre>@misc{alikhani2021crossmodal,
