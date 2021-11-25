@@ -106,3 +106,9 @@ It involves control certain attribute of an image by first map the image into th
 
 ### Latent Mapper
 
+## StyleGAN of All Trades<d-cite key="chong2021stylegan"></d-cite>
+
+https://github.com/mchong6/SOAT
+
+https://mp.weixin.qq.com/s/2G9JAWmXig0o8WR1J7dfkg
+
