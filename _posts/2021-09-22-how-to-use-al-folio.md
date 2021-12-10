@@ -14,7 +14,7 @@ bibliography: distill.bib
 
 ---
 
-## Setup environment
+# Setup environment
 
 The theme is build on Ruby, and if you are using MacOS or don't have root permission, you probably want to install your own Ruby (just like Anaconda for Python if you are a Python user like me). I use [rbenv](https://github.com/rbenv/rbenv){:target="\_blank"}, the steps are as follows:
 
@@ -27,11 +27,11 @@ The theme is build on Ruby, and if you are using MacOS or don't have root permis
 All markdown files support HTML and [Liquid](https://github.com/Shopify/liquid) language.
 
 
-## Structure
+# Structure
 
 `_config.yml` defines all global variables. If you just started and don't know how to read and use this file, here are some tips.
 
-### Publications
+## Publications
 
 * `_pages/publications.md` shows the content, make sure to change the `years` to contain all your publications. 
 * `_bibliography/papers.bib` contains all papers.
@@ -42,31 +42,72 @@ All markdown files support HTML and [Liquid](https://github.com/Shopify/liquid) 
 * use `abstract` to add an abstract button.
 * use `bibtex_show` to show a BIB button.
 
-### Blogs
+## Blogs
 
 * `blog/index.html` shows the content.
 * `_posts/*` contains all blogs.
 * follow [the al-folio template](https://github.com/alshedivat/al-folio/blob/master/_posts/2018-12-22-distill.md) to use distill format to write your blog.
 * `layout` has to be `post` if you want to use Disqus to add comment.
 
-### Projects
+## Projects
 
 * `_includes/projects*.html` define the UI.
 * `_pages/projects.md` shows the content.
 * `_projects/*` contains all projects.
 
-### News
+## News
 
 * `_pages/news.md` shows the content.
 * `_news/*` contains all news.
 
 
-## FAQs
+# FAQs
 
-### How to add tables/images/pdf/citations/twitters?
+## How to add images?
+### Add ONE image
+```html
+<div class='row mt-3'>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/1.jpg" data-zoomable>
+    </div>
+</div>
+```
+<div class='row mt-3'>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/1.jpg" data-zoomable>
+    </div>
+</div>
+
+### Add MULTIPLE images
+```html
+<div class='row mt-3'>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/1.jpg" data-zoomable>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/2.jpg" data-zoomable>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/3.jpg" data-zoomable>
+    </div>
+</div>
+```
+<div class='row mt-3'>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/1.jpg" data-zoomable>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/2.jpg" data-zoomable>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/3.jpg" data-zoomable>
+    </div>
+</div>
+
+## How to add tables/pdf/citations/twitters?
 
 [Al-folio post examples](https://github.com/alshedivat/al-folio/tree/master/_posts)
 
-### How to add your own page?
+## How to add your own page?
 
 Create `news.md` in `_pages/`, you can copy `projects.md` as a start, modify the content as your want using HTML and Liquid.
