@@ -12,7 +12,7 @@ category: work
 
 <table class="table table-bordered text-center">
     <td><a href="https://arxiv.org/abs/2109.11047"><div>Paper</div></a></td>
-    <td><a href="https://github.com/Hareesh-Ravi/Mutimodal-Discourse"><div>Code</div></a></td>
+    <td><a href="https://github.com/klory/Cross-Modal-Coherence-for-Text-to-Image-Retrieval"><div>Code</div></a></td>
 </table>
 
 <h2> Abstract </h2>
