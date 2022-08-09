@@ -11,7 +11,7 @@
   Fangda HAN
 
 
-  | blog
+  | Use screen to keep sessions alive when you leave
 
 </title>
 <meta name="description" content="Fangda's personal website
@@ -37,7 +37,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/blog/2021/how-to-use-screen/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -105,14 +105,10 @@
             <a class="nav-link" href="/blog/">
               blog
               
-              <span class="sr-only">(current)</span>
-              
             </a>
           </li>
           
           <!-- Other pages -->
-          
-          
           
           
           
@@ -194,70 +190,77 @@
     <!-- Content -->
 
     <div class="container mt-5">
-      <div class="post">
+      
 
-  <!-- <div class="header-bar">
-    <h1>Thoughts</h1>
-    <h2>Random thoughts and collections</h2>
-  </div> -->
+<div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Use screen to keep sessions alive when you leave</h1>
+    <p class="post-meta">September 24, 2021</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2022/t-test/">T test</a></h3>
-        <p class="post-meta">July 30, 2022</p>
-        <p></p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2022/z-test/">Z test</a></h3>
-        <p class="post-meta">July 29, 2022</p>
-        <p></p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2022/hypothesis-test/">Hypothesis test</a></h3>
-        <p class="post-meta">July 28, 2022</p>
-        <p></p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2022/how-to-transform-epub-to-pdf-with-Python/">How to transform epub with images to pdf using Python</a></h3>
-        <p class="post-meta">July 28, 2022</p>
-        <p>Epub to PDF</p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2021/how-to-develop-GUI-using-JavaFX/">How to develop GUI on desktop using JavaFX</a></h3>
-        <p class="post-meta">December 1, 2021</p>
-        <p></p>
-      </li>
-    
-  </ul>
+  <article class="post-content">
+    <h2 id="what-is-screen">What is screen</h2>
+
+<p><code class="language-plaintext highlighter-rouge">screen</code> is a Linux tool to create seesions in your terminal, these sessions will remain alive even when you close your terminal, which happens quite often when running deep learning models on remote clusters.</p>
+
+<h2 id="common-usages">Common usages</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">screen -ls</code> lists all sessions</li>
+  <li><code class="language-plaintext highlighter-rouge">screen -S your-session-name</code> creates a new session</li>
+  <li><code class="language-plaintext highlighter-rouge">screen -r your-session-name</code> attach an existing session, you can just type in the first few letters</li>
+  <li><code class="language-plaintext highlighter-rouge">screen -X -S your-session-name quit</code> kill an existing session</li>
+</ul>
+
+<p>I like shortcuts, I create a few and put them in <code class="language-plaintext highlighter-rouge">~/.bashrc</code>, so I dou’t need to input these long commands</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">sls</span><span class="o">=</span><span class="s1">'screen -ls'</span>
+<span class="nb">alias </span><span class="nv">sr</span><span class="o">=</span><span class="s1">'screen -r'</span>
+<span class="nb">alias </span><span class="nv">sS</span><span class="o">=</span><span class="s1">'screen -S'</span>
+<span class="nb">alias </span><span class="nv">ns</span><span class="o">=</span><span class="s1">'nvidia-smi'</span> <span class="c"># extra bonus</span>
+<span class="k">function </span>sk<span class="o">()</span> <span class="o">{</span>
+  <span class="nv">var</span><span class="o">=</span><span class="si">$(</span>screen <span class="nt">-ls</span> <span class="nv">$1</span>|awk <span class="s1">'NR==2 {print $1}'</span><span class="si">)</span>
+  <span class="nb">echo</span> <span class="s1">'trying to kill'</span> <span class="nv">$var</span>
+  screen <span class="nt">-X</span> <span class="nt">-S</span> <span class="nv">$1</span> quit
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>When you are inside a screen session:</p>
+
+<ul>
+  <li>press <code class="language-plaintext highlighter-rouge">control + A</code>, release then press <code class="language-plaintext highlighter-rouge">D</code> to detach the current session</li>
+  <li>press <code class="language-plaintext highlighter-rouge">control + D</code>, quit the current session</li>
+  <li>press <code class="language-plaintext highlighter-rouge">control + A</code>, release then type <code class="language-plaintext highlighter-rouge">:sessionname new-session-name</code> to rename the current session.</li>
+</ul>
+
+<h2 id="defects">Defects</h2>
+
+<ul>
+  <li>Sometimes I forget whether I’m in a session or which session I’m in, but I could not find a way to always show the current session name.</li>
+</ul>
+
+<h2 id="qa">Q&amp;A</h2>
+
+<ul>
+  <li><a href="https://kb.iu.edu/d/ahrm">can’t re-attach to your screen session after a lost connection</a></li>
+</ul>
+
+  </article>
 
   
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
-
-
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'fangdahan';
+      var disqus_identifier = '/blog/2021/how-to-use-screen';
+      var disqus_title      = "Use screen to keep sessions alive when you leave";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
 
 </div>
 

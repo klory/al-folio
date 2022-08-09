@@ -11,7 +11,7 @@
   Fangda HAN
 
 
-  | blog
+  | Make wandb ignore files for a project
 
 </title>
 <meta name="description" content="Fangda's personal website
@@ -37,7 +37,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/blog/2021/Make-WandB-ignore-files/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -105,14 +105,10 @@
             <a class="nav-link" href="/blog/">
               blog
               
-              <span class="sr-only">(current)</span>
-              
             </a>
           </li>
           
           <!-- Other pages -->
-          
-          
           
           
           
@@ -194,70 +190,55 @@
     <!-- Content -->
 
     <div class="container mt-5">
-      <div class="post">
+      
 
-  <!-- <div class="header-bar">
-    <h1>Thoughts</h1>
-    <h2>Random thoughts and collections</h2>
-  </div> -->
+<div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Make wandb ignore files for a project</h1>
+    <p class="post-meta">September 24, 2021</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2022/t-test/">T test</a></h3>
-        <p class="post-meta">July 30, 2022</p>
-        <p></p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2022/z-test/">Z test</a></h3>
-        <p class="post-meta">July 29, 2022</p>
-        <p></p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2022/hypothesis-test/">Hypothesis test</a></h3>
-        <p class="post-meta">July 28, 2022</p>
-        <p></p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2022/how-to-transform-epub-to-pdf-with-Python/">How to transform epub with images to pdf using Python</a></h3>
-        <p class="post-meta">July 28, 2022</p>
-        <p>Epub to PDF</p>
-      </li>
-    
-      <li>
-        <h3><a class="post-title" href="/blog/2021/how-to-develop-GUI-using-JavaFX/">How to develop GUI on desktop using JavaFX</a></h3>
-        <p class="post-meta">December 1, 2021</p>
-        <p></p>
-      </li>
-    
-  </ul>
+  <article class="post-content">
+    <h2 id="what-is-wandb">What is WandB</h2>
+
+<p><a href="https://wandb.ai/">WandB</a> is a handy tool to visualize training process as well as cross-validate hyper-parameters. One thing wandb do is it automatically uploads all files in <code class="language-plaintext highlighter-rouge">wandb.run.dir</code>. However you only get <a href="https://wandb.ai/subscriptions">100GB</a> for free, and when you save a lot of checkpoints, videos, images, it’s easily become full.</p>
+
+<p>While I know we can just create another folder to save our large files, but I kind of like how wandb name each run, so I still prefer saving to <code class="language-plaintext highlighter-rouge">wandb.run.dir</code>. (and sometimes it took too long to upload all files…)</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/wandb-run-dir.jpg" data-zoomable="" />
+    </div>
+</div>
+
+<p>The official doc very briefly talked about how to ignore files for your project, but there is not demo files, I did some research in their source code, and found the steps.</p>
+
+<ol>
+  <li>Create a file named <code class="language-plaintext highlighter-rouge">setting</code> in <code class="language-plaintext highlighter-rouge">wandb/</code></li>
+  <li>Edit <code class="language-plaintext highlighter-rouge">setting</code>, both lines has to be exactly like this and for globs, each file should be comma separated, no extra space in between. e.g.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[default]
+ignore_globs=*.npy,*pt 
+</code></pre></div></div>
+
+  </article>
 
   
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
-
-
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'fangdahan';
+      var disqus_identifier = '/blog/2021/Make-WandB-ignore-files';
+      var disqus_title      = "Make wandb ignore files for a project";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
 
 </div>
 

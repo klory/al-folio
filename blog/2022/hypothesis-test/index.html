@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>
+
+  Fangda HAN
+
+
+  | Hypothesis test
+
+</title>
+<meta name="description" content="Fangda's personal website
+">
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+<!-- Styles -->
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨</text></svg>">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="/blog/2022/hypothesis-test/">
+
+<!-- JQuery -->
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+<!-- Theming-->
+
+<script src="/assets/js/theme.js"></script>
+<script src="/assets/js/dark_mode.js"></script>
+
+
+
+
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="/">
+        <span class="font-weight-bold">Fangda HAN</span>
+      </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Blog -->
+          <li class="nav-item active">
+            <a class="nav-link" href="/blog/">
+              blog
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/experience/">
+                experience
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/news/">
+                news
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                publications
+                
+              </a>
+          </li>
+          
+          
+          
+          
+            <div class = "toggle-container">
+              <a id = "light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+              </a>
+            </div>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Hypothesis test</h1>
+    <p class="post-meta">July 28, 2022</p>
+  </header>
+
+  <article class="post-content">
+    <p>From <a href="https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/">here</a>: Hypothesis testing in statistics is a way for you to test the results of a survey or experiment to see if you have meaningful results. You’re basically testing whether your results are valid by figuring out the odds that your results have happened by chance. If your results may have happened by chance, the experiment won’t be repeatable and so has little use.</p>
+
+<h1 id="null-hypothesis">Null Hypothesis</h1>
+<p>From <a href="https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/">here</a> again: The null hypothesis is always the accepted fact.</p>
+
+<h1 id="state-a-null-hypothesis">State a Null Hypothesis</h1>
+<p>This is a little tricky, you make a hypothesis based on experiment result, stating a null hypothesis means “assuming your result still follows the accepted fact”, let’s try <a href="https://www.statisticshowto.com/probability-and-statistics/hypothesis-testing/">some exercises</a>:</p>
+
+<blockquote>
+  <p>[IQ expl] A principal at a certain school claims that the students in his school are above average intelligence. A random sample of thirty students IQ scores have a mean score of 112.5. Is there sufficient evidence to support the principal’s claim? The mean population IQ is 100 with a standard deviation of 15.</p>
+</blockquote>
+
+<p>Here, the accepted fact is “IQ=100”, the principle hypothesizes “IQ&gt;100 in his school”, so the null hypothesis is “IQ=100 in his school”. And we are computing under the null hypothesis, how likely (probability) the result (IQ=112.5 over 30 students) will happen?</p>
+
+<ul>
+  <li>Knows:
+    <ul>
+      <li>pupulation mean = 100</li>
+      <li>population std = 15</li>
+      <li>sample size = 30</li>
+      <li>sample mean = 112.5</li>
+      <li>sample std = ?</li>
+    </ul>
+  </li>
+  <li>Goal:
+    <ul>
+      <li>If the sample mean is significant</li>
+    </ul>
+  </li>
+</ul>
+
+<p>know population std =&gt; Z-test</p>
+
+<hr />
+
+<blockquote>
+  <p>[Blood glucose expl] Blood glucose levels for obese patients have a mean of 100 with a standard deviation of 15. A researcher thinks that a diet high in raw cornstarch will have <strong>a positive or negative</strong> effect on blood glucose levels. A sample of 30 patients who have tried the raw cornstarch diet have a mean glucose level of 102.</p>
+</blockquote>
+
+<p>Here, the accepted fact is “\(\mu=100\)”, the researcher hypothesizes “\(\mu&lt;100\) or \(\mu&gt;100\) with cornstarch”, so the null hypothesis is “\(\mu=100\) with cornstarch”. And we are computing under the null hypothesis, how likely (probability) the result (\(\mu&gt;=102\) or \(\mu&lt;=98\) over 30 patients, <a href="#oneside_vs_twoside">why?</a>) will happen?</p>
+
+<ul>
+  <li>Knows:
+    <ul>
+      <li>pupulation mean = 100</li>
+      <li>population std = 15</li>
+      <li>sample size = 30</li>
+      <li>sample mean = 102</li>
+      <li>sample std = ?</li>
+    </ul>
+  </li>
+  <li>Goal:
+    <ul>
+      <li>If the sample mean is significant</li>
+    </ul>
+  </li>
+</ul>
+
+<p>know population std =&gt; Z-test</p>
+
+<hr />
+
+<blockquote>
+  <p>[Patient recovery expl] Researcher thinks that if knee surgery patients go to physical therapy twice a week (instead of 3 times), their recovery period will be longer. Average recovery times for knee surgery patients is 8.2 weeks, experiemnt result on 40 patients shows the average is 8.3 weeks and std is 0.5 weeks.</p>
+</blockquote>
+
+<p>Here, the accepted fact is \(\mu=8.2\), researcher hypothesizes “\(\mu&gt;8.2\) when therapy twick a week”. So the null hypothesis is “\(\mu=8.2\) when therapy twice a week”. In other words, twice a week has no effect, the patients still only need 8.2 weeks to recover. And we are computing under the null hypothesis, how likely (probability) the result (8.3 weeks over 40 patients) will happen?</p>
+
+<ul>
+  <li>Knows:
+    <ul>
+      <li>pupulation mean = 8.2</li>
+      <li>pupulation std = ?</li>
+      <li>sample size = 40</li>
+      <li>sample mean = 8.3</li>
+      <li>sample std = 0.5</li>
+    </ul>
+  </li>
+  <li>Goal:
+    <ul>
+      <li>If the sample mean is significant</li>
+    </ul>
+  </li>
+</ul>
+
+<p>do NOT know population std =&gt; T-test</p>
+
+<hr />
+
+<p>Now let’s try more:</p>
+
+<blockquote>
+  <p>[<a href="https://www.probabilitycourse.com/chapter8/8_4_4_p_vals.php">Toss coin expl</a> expl] If we toss a coin 100 times with 60 heads, can we trust it to be a fair coin?</p>
+</blockquote>
+
+<p>Here, the accepted fact is “coin is fair”, the computed result hypothesizes “This coin is not fair with P(head)=0.6”, so the null hypothesis is “This coin is fair”. And we are computing under the null hypothesis, how likely (probability) the result (\(P(head)=0.6\)) will happen?</p>
+
+<ul>
+  <li>Knows:
+    <ul>
+      <li>pupulation mean = np = 100 * 0.5 = 50</li>
+      <li>population std = \(\sqrt{np(1-p)} = \sqrt{100 * 0.5 * 0.5} = 5\)</li>
+      <li>sample size = 100</li>
+      <li>sample mean = 60</li>
+      <li>sample std = \(\sqrt{100 * 0.6 * 0.4} \approx 4.9\)</li>
+    </ul>
+  </li>
+  <li>Goal:
+    <ul>
+      <li>If the sample mean is significant</li>
+    </ul>
+  </li>
+</ul>
+
+<p>know population std =&gt; Z-test</p>
+
+<hr />
+
+<blockquote>
+  <p>[<a href="https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.pearsonr.html">Pearson expl</a> expl] Given two sequence x (feature) and y (label), we can compute <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient">Pearson correlation</a> r. Assume r is high (e.g., 0.8), how do we trust this result, what if both sequences are actually randomly sampled and this is just a coincidence? In other words, how to know if this result is <strong>significantly</strong> different compared with “assuming x and y are randomly sampled”? How <strong>confident</strong> are we about the result?</p>
+</blockquote>
+
+<p>Here, the accepted fact is “if data are randomly sampled, they should have no correlation, in other words, the pearson correlation coeeficient should be \(r_0=0\)”, the computed result hypothesizes “This {x,y} have correlation \(r_{x,y}=x\)”, so the null hypothesis is “This {x,y} have no correlation”. And we are computing under the null hypothesis, how likely (probability) the result (\(r_{x,y}==x\)) will happen?</p>
+
+<ul>
+  <li>Knows:
+    <ul>
+      <li>pupulation mean = 0</li>
+      <li>population std = ?</li>
+      <li>sample size = len(x) + len(y) - 2 (<a href="https://stats.stackexchange.com/questions/270612/why-test-statistic-for-the-pearson-correlation-coefficient-is-frac-r-sqrtn-2">why?</a>)</li>
+      <li>sample mean = r</li>
+      <li>sample std = \(\sqrt{1-r^2}\) (<a href="https://stats.stackexchange.com/questions/270612/">why?</a>)</li>
+    </ul>
+  </li>
+  <li>Goal:
+    <ul>
+      <li>If the sample mean is significant</li>
+    </ul>
+  </li>
+</ul>
+
+<p>know population std =&gt; T-test</p>
+
+<hr />
+
+<blockquote>
+  <p>[<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind_from_stats.html">Two independent sample mean</a> expl] We are given two sequence a and b which may be sampled from the same one-dimensional random variable. E.g., we get 13 samples in a~[1, 3, 4, 6, 11, 13, 15, 19, 22, 24, 25, 26, 26] and 11 samples in b~[2, 4, 6, 9, 11, 13, 14, 15, 18, 19, 21], can we trust their means are actually the same?</p>
+</blockquote>
+
+<p>Here, the accepted fact is “if two sequence are sampled from same random variable, they should have identical mean”, the computed result hypothesizes “These two sequences {a,b} are not from the same random variable, and their mean differenc is \(\Delta\)”, so the null hypothesis is “These two sequences {a,b} are sampled from same random variable”. And we are computing under the null hypothesis, how likely (probability) the result (mean difference is \(\Delta\)) will happen?</p>
+
+<ul>
+  <li>Knows:
+    <ul>
+      <li>pupulation mean = 0 (assume identical mean)</li>
+      <li>population std = ?</li>
+      <li>sample size = len(x) + len(y) - 2 (<a href="https://en.wikipedia.org/wiki/Student%27s_t-test#Independent_two-sample_t-test">why?</a>)</li>
+      <li>sample mean = \(\bar{a} - \bar{b}\)</li>
+      <li>sample std is quite complex, check the wikipedia for (<a href="https://en.wikipedia.org/wiki/Student%27s_t-test#Independent_two-sample_t-test">why</a>)</li>
+    </ul>
+  </li>
+  <li>Goal:
+    <ul>
+      <li>If the sample mean is significant</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<p>Now let’s try more and more:</p>
+
+<blockquote>
+  <p>[Classification expl] You develop a binary classification model with accuracy 98%, can you trust this accuracy?</p>
+</blockquote>
+
+<p>Here, the accepted fact is “if we randomly guess the result, we will have an accuracy 50%”, the reuslt hypothesizes “This is not random guess (the model works)”, so the null hypothesis is “This is still random guess”. And we are computing under the null hypothesis, how likely (probability) the result (accuracy is 90%) will happen?</p>
+
+<hr />
+
+<blockquote>
+  <p>[Regression expl] You develop a regression model which has mse (mean squared error) 0.2, can you trust this mse?</p>
+</blockquote>
+
+<p>Here, the accepted fact is “if we randomly guess the result, we will have an mse \(err_0\)”, the reuslt hypothesizes “This is not random guess (the model works)”, so the null hypothesis is “This is still random guess”. And we are computing under the null hypothesis, how likely (probability) the result (mse is 0.2) will happen?</p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>We now understand what is null hypothesis and how to state it. And at the end of each example, I also throw out a question, the question is actually what z-test/t-test tries to answer, more generally, <strong>under null hypothesis, how like the result will happen?</strong></p>
+
+<p>I’ll explain more in following posts.</p>
+
+  </article>
+
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'fangdahan';
+      var disqus_identifier = '/blog/2022/hypothesis-test';
+      var disqus_title      = "Hypothesis test";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2022 Fangda  Han.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+    
+    Last updated: August 09, 2022.
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- Bootsrap & MDB scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+
+
+  
+
+
+<!-- Medium Zoom JS -->
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="/assets/js/zoom.js"></script>
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+</html>
